@@ -3,11 +3,13 @@ from flask import Flask,render_template
 app= Flask(__name__)
 @app.route('/')
 def index():
-	return render_template("index.html")
+	title="Aws Projects 001"
+	return render_template("index.html", title=title)
 
 @app.route('/contact')
 def contact():
-	return render_template("contact.html")	
+	names= ["Said", "Susan", "Aicha", "Khalid"]
+	return render_template("contact.html", names=names)	
 
 @app.route('/employeelist')
 def employeelist():
